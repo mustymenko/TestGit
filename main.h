@@ -16,6 +16,7 @@ void MainClass::setArgs( char** args, int argCounter ) {
 }
 
 void MainClass::printProgNameWithArgs( char** argStrArr, int argCounter ) {
+    //Call private function to set private variables
     setArgs( argStrArr, argCounter - 1 );
     std::cout << "Here we have: " << programName << " with " << argc << " argument(s)." <<  endl;
     for( int i = 0; i < argc; ++i ) {
