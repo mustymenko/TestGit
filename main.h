@@ -10,15 +10,15 @@ class MainClass {
 
 };
 
-void MainClass::setArgs( char** args, int argc ) {
+void MainClass::setArgs( char** args, int argCounter ) {
     programName = args[0];
-    argc = argc;
+    argc = argCounter;
 }
 
-void MainClass::printProgNameWithArgs( char** args, int argc ) {
-    setArgs( args, argc );
-    std::cout << "Here we have: " << programName << " with " << ( argc - 1 ) << " argument(s)." <<  endl;
-    for( int i = 1; i < argc; ++i ) {
-	std::cout << args[i] << endl;
+void MainClass::printProgNameWithArgs( char** argStrArr, int argCounter ) {
+    setArgs( argStrArr, argCounter - 1 );
+    std::cout << "Here we have: " << programName << " with " << argc << " argument(s)." <<  endl;
+    for( int i = 0; i < argc; ++i ) {
+	std::cout << argStrArr[i+1] << endl;
     }
 }
