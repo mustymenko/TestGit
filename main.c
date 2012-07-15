@@ -1,5 +1,8 @@
-#include "stdio.h"
+#include <iostream>
+#include "main.h"
 
-void main( int argc, char * argv[] ) {
-    printf("%d\n", argc);
+int main( int argc, char * argv[] ) {
+    MainClass mC;
+    mC.printProgNameWithArgs( argv, argc );
+    return true;
 }
